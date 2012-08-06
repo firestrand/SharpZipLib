@@ -152,12 +152,12 @@ class MainClass
 				
 			case Command.Compress:
 				Console.WriteLine("Compressing {0} to {1}", parser.Source, parser.Target);
-				BZip2.Compress(File.OpenRead(parser.Source), File.Create(parser.Target), 4096);
+				BZip2.Compress(File.OpenRead(parser.Source), File.Create(parser.Target),true, 4096);
 				break;
 				
 			case Command.Decompress:
 				Console.WriteLine("Decompressing {0} to {1}", parser.Source, parser.Target);
-				BZip2.Decompress(File.OpenRead(parser.Source), File.Create(parser.Target));
+				BZip2.Decompress(File.OpenRead(parser.Source), File.Create(parser.Target),true);
 				break;
 		}
 	}

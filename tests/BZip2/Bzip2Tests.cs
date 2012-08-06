@@ -94,8 +94,9 @@ namespace ICSharpCode.SharpZipLib.Tests.BZip2
 		long readTarget_;
 		long writeTarget_;
 		
-		[Test]
-		[Category("BZip2")]
+		//Performance is not a unit test and slows down Test Driven Development
+        //[Test]
+		//[Category("BZip2")]
 		public void Performance()
 		{
 			window_ = new WindowedStream(0x150000);
